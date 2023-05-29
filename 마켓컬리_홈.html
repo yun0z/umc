@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마켓컬리_홈화면</title>
+    <link rel="stylesheet" href="마켓컬리_홈.css" />
+    <!--swiper:슬라이드배너-->
+    <link rel="stylesheet" href="https:unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https:unpkg.com/swiper@8/swiper-bundle.css" />
+    <script src="https:unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https:unpkg.com/swiper@8/swiper-bundle.js"></script>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      const slide=new Swiper ('#my-swiper', {
+        slidesPerView:'auto',
+        spaceBetween:6,
+        loop:false,
+        loopAdditionalSlides:1,
+        pagination:false,
+        autoplay:{
+          delay:3000,
+          disableOnInteraction:false,
+        },
+        navigation:{
+          nextEl:'.swiper-button-next',
+          prevEl:'.swiper-button-prev',
+        },
+      })
+    </script>
+     
+  </head>
+  <body>
+    <!-- 전체>홈화면 페이지 -->
+    <div class="home_page">
+      <!-- 1> 헤더 섹션-->
+      <div class="header_section">
+        <div class="top_header">
+          <!-- 회원가입 로그인 고객센터-->
+          <div class="top_1">
+            <a class="top_a">회원가입</a>
+            <div class="top_line"></div>
+            <a>로그인</a>
+            <div class="top_line"></div>
+            <div>
+              <div>
+                <a class="top_sub1">고객센터<img src="./hello-react/src/images/고객센터_화살표.jpg" class="img_arrow"></a>
+                <div class="top_sub2">
+                  <div>공지사항</div>
+                  <div>자주하는 질문</div>
+                  <div>1:1 문의</div>
+                  <div>대량주문 문의</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창-->
+          <div class="top_2">
+            <div class="top_logo">
+              <img src="./hello-react/src/images/마켓컬리_로고.jpg"></img>
+              <a class="market">마켓컬리</a><div class="title_line"></div>
+              <a class="beauty">뷰티컬리</a><span class="N"></span>
+            </div>
+            <div class="top_search">
+              <div class="search_detail">
+                <input type="text" placeholder="검색어를 입력해주세요"></input>
+                <button></button>
+              </div>
+            </div>
+            <div class="icon3">
+              <div class="icon_detail">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_header">
+          <div class="category">
+            <!-- 카테고리-->
+            <div class="category_1">
+              <img src="./hello-react/src/images/카테고리.jpg">
+              <a>카테고리</a>
+            </div>
+            <!-- 신상품 베스트 -->
+            <div class="category_2">
+              <a>신상품</a>
+              <a>베스트</a>
+              <a>알뜰쇼핑</a>
+              <a>특가/혜택</a>
+            </div>
+            <!-- 샛별택배배송 -->
+            <div class="category_3">
+              <div>샛별・택배<span>배송안내</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--*****************************************************************-->
+      <!-- 2> 메인 섹션-->
+      <div class="main_section">
+        <div class="main_1">
+          <!-- 슬라이드 배너 -->
+          <div class="swiper-container" id="my-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./hello-react/src/images/슬라이드배너_1.jpg"></div>
+              <div class="swiper-slide"><img src="./hello-react/src/images/슬라이드배너_2.jpg"></div>
+              <div class="swiper-slide"><img src="./hello-react/src/images/슬라이드배너_3.jpg"></div>
+              <div class="swiper-slide"><img src="./hello-react/src/images/슬라이드배너_4.jpg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main_2">
+          <!--상품추천 코너-->
+          <div class="recommend_title">
+              <!--제목-->
+              <div>
+                <a>
+                  <span>이 상품 어때요?</span>
+                </a>
+              </div>  
+          </div>
+          <!--상품목록-->
+          <div class="recommend_product">
+            <!--상품1-->
+            <div class="product_list">
+              <a class="product_top" href="https://www.kurly.com/goods/5066745">
+                <img class="product_img" src="./hello-react/src/images/상품_1.jpg">
+              </a>
+              <a class="product_bottom" href="https://www.kurly.com/goods/5066745">
+                  <div >
+                    <h3>[콜린스 다이닝] 한우 나주식 곰탕</h3>
+                    <div>10% <span>7,650원</span></div>
+                    <div>후기 999+</div>
+                  </div>
+                </a>
+              
+            </div>
+            <!--상품2-->
+            <div class="product_list">
+                <a class="product_top" href="https://www.kurly.com/goods/5043436">
+                  <img class="product_img" src="./hello-react/src/images/상품_2.jpg">
+                </a>
+                <a class="product_bottom" href="https://www.kurly.com/goods/5043436">
+                  <div>
+                    <h3>[메르시] 스톡 초콜릿 3종</h3>
+                    <div>17,000원</div>
+                    <div>후기 999+</div>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+          
+      </div>
+        
+    </div>
+      <!--*****************************************************************-->
+      
+  </body>
+</html>
